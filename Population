@@ -1,0 +1,28 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Sample data
+gender_data = ['Male', 'Female', 'Female', 'Male', 'Female', 'Male', 'Male', 'Female', 'Female', 'Male']
+age_data = [22, 25, 21, 35, 42, 30, 29, 24, 27, 31, 33, 36, 23, 28, 26, 22, 30, 32, 40, 34]
+
+# Function to plot gender distribution
+def plot_gender_distribution(data):
+    plt.figure(figsize=(8, 6))
+    sns.countplot(x=data, palette='viridis')
+    plt.title('Gender Distribution')
+    plt.xlabel('Gender')
+    plt.ylabel('Count')
+    plt.show()
+
+# Function to plot age distribution
+def plot_age_distribution(data):
+    plt.figure(figsize=(10, 6))
+    sns.histplot(data, bins=10, kde=True, color='skyblue')
+    plt.title('Age Distribution')
+    plt.xlabel('Age')
+    plt.ylabel('Frequency')
+    plt.show()
+
+# Plotting
+plot_gender_distribution(gender_data)
+plot_age_distribution(age_data)
